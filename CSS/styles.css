@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&family=Signika:wght@300..700&display=swap');
+
+* {
+    padding: 0;
+    list-style: none;
+    font-family: "Signika", sans-serif !important;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #33333300;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffffe7;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+body {
+    background-color: #000;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.home video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    filter: brightness(0.5);
+    top: 0;
+}
+
+.home div {
+    margin-top: 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Signika", sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px #000;
+    justify-content: center;
+    align-items: center;
+    animation: textUp 2.4s ease-out;
+}
+
+
+
+@keyframes textUp {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.2;
+        transform: translateY(-10%);
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    70% {
+        opacity: 0.7;
+        transform: translateY(5%);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.home div h1 {
+    font-size: 4rem;
+    margin-bottom: 2px;
+}
+
+.home div p {
+    font-size: 2rem;
+    /* font-family: "Libre Barcode 39 Extended Text", system-ui; */
+}
+
+.home div button {
+    padding: 10px;
+    background-color: #0000004d;
+    backdrop-filter: blur(7px);
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "Signika", sans-serif;
+    width: 24%;
+    text-align: center;
+}
+
+.home div button:hover {
+    transform: scale(1.07);
+    transition: all 0.7s;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000041;
+    backdrop-filter: blur(7px);
+    position: fixed;
+    width: 90%;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.brand {
+    font-size: 1.5rem;
+    margin-right: 27%;
+    cursor: pointer;
+}
+
+.navbar img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border: 1px solid #00000079;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav-list ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list ul li a {
+    margin-left: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none !important;
+    position: relative;
+}
+
+.nav-list ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-list ul li a:hover::after {
+    width: 100%;
+}
+
+.nav-list ul li a.active::after {
+    width: 100%;
+}
