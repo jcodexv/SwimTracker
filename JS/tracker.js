@@ -6,13 +6,13 @@ const poolDistances = {
         'breaststroke': [50, 100, 200],
         'medley': [200, 400]
     },
-    '30m': {
-        'freestyle': [50, 100, 200, 400, 800],
-        'butterfly': [50, 100, 200],
-        'backstroke': [50, 100, 200],
-        'breaststroke': [50, 100, 200],
-        'medley': [200, 400]
-    },
+    // '30m': {
+    //     'freestyle': [50, 100, 200, 400, 800],
+    //     'butterfly': [50, 100, 200],
+    //     'backstroke': [50, 100, 200],
+    //     'breaststroke': [50, 100, 200],
+    //     'medley': [200, 400]
+    // },
     '50m': {
         'freestyle': [100, 200, 400, 800, 1500],
         'butterfly': [100, 200],
