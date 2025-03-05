@@ -186,3 +186,16 @@ document.querySelectorAll('.gender-icon').forEach(icon => {
         });
     });
 });
+
+document.getElementById('reset-btn').addEventListener('click', function() {
+    document.getElementById('your-time').value = '';
+    
+    genderRadios.forEach(radio => {
+        radio.checked = false;
+    });
+
+    const result = document.getElementById('result');
+    result.classList.remove('show');
+    result.classList.add('hide');
+    result.innerHTML = '<br><br> RESULTS WILL BE SHOWN HERE';
+});

@@ -35,7 +35,7 @@ body {
 }
 
 .home div {
-    margin-top: 25%;
+    margin-top: 18%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -371,9 +371,7 @@ label {
     color: #fff;
     border: none;
     border-radius: 4px;
-    font-size: 1rem;
     margin: 27px 0;
-    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
@@ -381,20 +379,45 @@ label {
     background-color: #0056b3;
 }
 
+#calculate-btn,
+#reset-btn {
+    text-transform: uppercase;
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reset-btn {
+    width: 20%;
+    margin-top: -20px;
+    background: none;
+    border: 1px solid #ff1414;
+    padding: 5px;
+    border-radius: 7px;
+    color: #ff1414;
+}
+
 #result {
     margin-top: 20px;
-    padding: 15px;
-    background-color: #e7f7ff;
-    border: 1px solid #b3e0ff;
+    padding: 17px;
+    background-color: #00000049;
+    border: none;
     border-radius: 4px;
-    font-size: 1.1rem;
-    color: #333;
+    font-size: 1.5rem;
     display: block;
-    visibility: hidden;
+    height: 160px;
+    transition: all 0.74s;
+    color: #fff;
+    text-align: center;
 }
 
 #result.show {
-    visibility: visible;
+    background-color: #e7f7ff;
+    border: 1px solid #b3e0ff;
+    color: #333;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1rem;
 }
 
 select {
