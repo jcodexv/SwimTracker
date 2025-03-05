@@ -1,8 +1,14 @@
-const navToggler = document.querySelector('.nav-toggler');
+const navToggler = document.querySelector('#open-btn');
+const navCloser = document.querySelector('#close-btn');
 const navList = document.querySelector('.nav-list');
 const joinBtn = document.querySelector('#join-btn');
 
-navToggler.addEventListener('click', () => {
-    navList.classList.toggle("active");
-    joinBtn.classList.toggle("noblur");
-});
+function toggleNav(isOpen) {
+    navList.classList.toggle("active", isOpen);
+    joinBtn.classList.toggle("noblur", isOpen);
+    navCloser.classList.toggle("active", isOpen);
+    navToggler.classList.toggle("unactive", isOpen);
+}
+
+navToggler.addEventListener('click', () => toggleNav(true));
+navCloser.addEventListener('click', () => toggleNav(false));
