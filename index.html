@@ -37,6 +37,60 @@
             <button id="join-btn">Join Now!</button>
         </div>
     </div>
+    
+    <div class="tracker">
+        <form id="tracker-form">
+            <label for="pool-distance">Pool Length</label>
+            <select name="pool-distance" id="pool-distance">
+                <option value="25m">25m</option>
+                <option value="30m">30m</option>
+                <option value="50m">50m</option>
+            </select>
+
+            <label for="style">Swimming Style</label>
+            <select name="style" id="style">
+                <option value="freestyle">Freestyle</option>
+                <option value="butterfly">Butterfly</option>
+                <option value="backstroke">Backstroke</option>
+                <option value="breaststroke">Breaststroke</option>
+                <option value="medley">Medley</option>
+            </select>
+
+            <label for="gender">Gender</label>
+            <div id="gender">
+                <input type="radio" name="gender" value="male" id="radio-male" style="display: none;">
+                <label for="radio-male">
+                    <img src="https://cdn.pixabay.com/photo/2012/04/10/16/40/sign-26289_1280.png" alt="Male" class="gender-icon" id="male" />
+                </label>
+            
+                <input type="radio" name="gender" value="female" id="radio-female" style="display: none;">
+                <label for="radio-female">
+                    <img src="https://e7.pngegg.com/pngimages/864/150/png-clipart-female-symbol-woman-symbol-s-text-bathroom.png" alt="Female" class="gender-icon" id="female" />
+                </label>
+
+                <input type="radio" name="gender" value="random" id="radio-random" style="display: none;">
+                <label for="radio-random">
+                    <img src="https://static-00.iconduck.com/assets.00/perspective-dice-six-faces-random-icon-2048x2048-9uct7e7b.png" alt="Male" class="gender-icon" id="male" />
+                </label>
+            </div>
+            
+    
+            <label for="your-distance">Your Distance</label>
+            <select name="your-distance" id="your-distance">
+
+            </select>
+    
+            <label for="your-time">Your Time</label>
+            <input type="number" id="your-time" placeholder="Enter Your Time">
+
+    
+            <button type="button" id="calculate-btn">Calculate</button>
+    
+            <div id="result"></div>
+        </form>
+    </div>
+    <script src="./JS/tracker.js"></script>
+      
     <script src="./JS/main.js"></script>
 </body>
 </html>

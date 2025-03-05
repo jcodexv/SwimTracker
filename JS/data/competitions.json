@@ -1,0 +1,252 @@
+{
+    "freestyle": {
+      "50 meters": [
+        {
+          "name": "César Cielo",
+          "gender": "male",
+          "nationality": "Brazilian",
+          "time": "20.91s"
+        },
+        {
+          "name": "Sarah Sjöström",
+          "gender": "female",
+          "nationality": "Swedish",
+          "time": "23.67s"
+        }
+      ],
+      "100 meters": [
+        {
+          "name": "David Popovici",
+          "gender": "male",
+          "nationality": "Romanian",
+          "time": "46.86s"
+        },
+        {
+          "name": "Sarah Sjöström",
+          "gender": "female",
+          "nationality": "Swedish",
+          "time": "51.71s"
+        }
+      ],
+      "200 meters": [
+        {
+          "name": "Paul Biedermann",
+          "gender": "male",
+          "nationality": "German",
+          "time": "1:42.00"
+        },
+        {
+          "name": "Federica Pellegrini",
+          "gender": "female",
+          "nationality": "Italian",
+          "time": "1:52.98"
+        }
+      ],
+      "400 meters": [
+        {
+          "name": "Paul Biedermann",
+          "gender": "male",
+          "nationality": "German",
+          "time": "3:40.07"
+        },
+        {
+          "name": "Katie Ledecky",
+          "gender": "female",
+          "nationality": "American",
+          "time": "3:56.46"
+        }
+      ],
+      "800 meters": [
+        {
+          "name": "Zhang Lin",
+          "gender": "male",
+          "nationality": "Chinese",
+          "time": "7:32.12"
+        },
+        {
+          "name": "Katie Ledecky",
+          "gender": "female",
+          "nationality": "American",
+          "time": "8:04.79"
+        }
+      ],
+      "1500 meters": [
+        {
+          "name": "Sun Yang",
+          "gender": "male",
+          "nationality": "Chinese",
+          "time": "14:31.02"
+        },
+        {
+          "name": "Katie Ledecky",
+          "gender": "female",
+          "nationality": "American",
+          "time": "15:20.48"
+        }
+      ]
+    },
+    "breaststroke": {
+      "50 meters": [
+        {
+          "name": "Adam Peaty",
+          "gender": "male",
+          "nationality": "British",
+          "time": "25.95s"
+        },
+        {
+          "name": "Lilly King",
+          "gender": "female",
+          "nationality": "American",
+          "time": "29.40s"
+        }
+      ],
+      "100 meters": [
+        {
+          "name": "Adam Peaty",
+          "gender": "male",
+          "nationality": "British",
+          "time": "56.88s"
+        },
+        {
+          "name": "Lilly King",
+          "gender": "female",
+          "nationality": "American",
+          "time": "1:04.13"
+        }
+      ],
+      "200 meters": [
+        {
+          "name": "Anton Chupkov",
+          "gender": "male",
+          "nationality": "Russian",
+          "time": "2:06.12"
+        },
+        {
+          "name": "Tatjana Schoenmaker",
+          "gender": "female",
+          "nationality": "South African",
+          "time": "2:18.95"
+        }
+      ]
+    },
+    "butterfly": {
+      "50 meters": [
+        {
+          "name": "Andriy Govorov",
+          "gender": "male",
+          "nationality": "Ukrainian",
+          "time": "22.27s"
+        },
+        {
+          "name": "Sarah Sjöström",
+          "gender": "female",
+          "nationality": "Swedish",
+          "time": "24.43s"
+        }
+      ],
+      "100 meters": [
+        {
+          "name": "Caeleb Dressel",
+          "gender": "male",
+          "nationality": "American",
+          "time": "49.45s"
+        },
+        {
+          "name": "Sarah Sjöström",
+          "gender": "female",
+          "nationality": "Swedish",
+          "time": "55.48s"
+        }
+      ],
+      "200 meters": [
+        {
+          "name": "Kristóf Milák",
+          "gender": "male",
+          "nationality": "Hungarian",
+          "time": "1:50.73"
+        },
+        {
+          "name": "Liu Zige",
+          "gender": "female",
+          "nationality": "Chinese",
+          "time": "2:01.81"
+        }
+      ]
+    },
+    "backstroke": {
+      "50 meters": [
+        {
+          "name": "Hunter Armstrong",
+          "gender": "male",
+          "nationality": "American",
+          "time": "23.71s"
+        },
+        {
+          "name": "Zhu Minjie",
+          "gender": "female",
+          "nationality": "Chinese",
+          "time": "26.98s"
+        }
+      ],
+      "100 meters": [
+        {
+          "name": "Ryan Murphy",
+          "gender": "male",
+          "nationality": "American",
+          "time": "51.85s"
+        },
+        {
+          "name": "Kaylee McKeown",
+          "gender": "female",
+          "nationality": "Australian",
+          "time": "57.45s"
+        }
+      ],
+      "200 meters": [
+        {
+          "name": "Aaron Peirsol",
+          "gender": "male",
+          "nationality": "American",
+          "time": "1:51.92"
+        },
+        {
+          "name": "Kaylee McKeown",
+          "gender": "female",
+          "nationality": "Australian",
+          "time": "2:03.14"
+        }
+      ]
+    },
+    "medley": {
+      "200 meters": [
+        {
+          "name": "Ryan Lochte",
+          "gender": "male",
+          "nationality": "American",
+          "time": "1:54.00"
+        },
+        {
+          "name": "Katinka Hosszú",
+          "gender": "female",
+          "nationality": "Hungarian",
+          "time": "2:06.12"
+        }
+      ],
+      "400 meters": [
+        {
+          "name": "Léon Marchand",
+          "gender": "male",
+          "nationality": "French",
+          "time": "4:02.50"
+        },
+        {
+          "name": "Katinka Hosszú",
+          "gender": "female",
+          "nationality": "Hungarian",
+          "time": "4:26.36"
+        }
+      ]
+    }
+}
+   
+  
