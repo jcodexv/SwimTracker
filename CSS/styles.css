@@ -35,7 +35,7 @@ body {
 }
 
 .home div {
-    margin-top: 18%;
+    margin-top: 16%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -44,7 +44,8 @@ body {
     text-shadow: 2px 2px 4px #000;
     justify-content: center;
     align-items: center;
-    animation: textUp 2.4s ease-out;
+    animation: textUp 1.4s ease-out;
+    z-index: 1;
 }
 
 
@@ -87,7 +88,7 @@ body {
 
 .home div button {
     padding: 10px;
-    background-color: #00000063;
+    background-color: #0000003f;
     border: 1px solid #fff;
     color: #fff;
     border-radius: 12px;
@@ -96,6 +97,7 @@ body {
     text-transform: uppercase;
     font-family: "Signika", sans-serif;
     width: 24%;
+    backdrop-filter: blur(6px);
     text-align: center;
 }
 
@@ -109,9 +111,10 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #0000008a;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px);
     position: fixed;
     width: 75%;
+    z-index: 100;
     color: #fff;
     text-transform: uppercase;
     border-radius: 19px;
@@ -328,16 +331,16 @@ body {
     }
 }
 
-
 .tracker {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #00000094;
+    background-color: #00000073;
     z-index: 1;
     border: 1px solid #e7f7ff48;
     color: #fff;
     border-radius: 8px;
+    backdrop-filter: blur(6px);
     box-shadow: 0 4px 8px rgba(228, 228, 228, 0.1);
 }
 
@@ -456,4 +459,19 @@ select {
 #radio-female:checked+label img,
 #radio-random:checked+label img {
     border: 2.5px solid #0046af;
+}
+
+.time-inputs {
+    display: flex;
+    align-items: center;
+}
+
+.time-inputs input {
+    width: 72px;
+    margin-right: 5px;
+}
+
+.time-inputs span {
+    font-size: 1.1rem;
+    margin: 0 5px;
 }

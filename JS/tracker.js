@@ -102,6 +102,7 @@ const swimmerRecords = {
         ]
     }
 };
+
 const styleSelect = document.getElementById('style');
 const poolDistanceSelect = document.getElementById('pool-distance');
 const distanceSelect = document.getElementById('your-distance');
@@ -136,11 +137,17 @@ function convertTimeToSeconds(time) {
         return parseFloat(time.replace('s', ''));
     }
 }
-
 document.getElementById('calculate-btn').addEventListener('click', function() {
-    const selectedDistance = document.getElementById('your-distance').value;
-    const selectedTime = document.getElementById('your-time').value;
+    const minutes = parseInt(document.getElementById('your-minutes').value) || 0;
+    const seconds = parseInt(document.getElementById('your-seconds').value) || 0;
 
+    // Validate inputs
+    if (isNaN(minutes) || isNaN(seconds)) {
+        alert("Please enter valid numbers for minutes and seconds.");
+        return;
+    }
+
+    const selectedDistance = document.getElementById('your-distance').value;
     const selectedGender = document.querySelector('input[name="gender"]:checked') 
         ? document.querySelector('input[name="gender"]:checked').value 
         : 'random';
@@ -148,11 +155,14 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
     const result = document.getElementById('result');
     result.classList.remove('hide');
     result.classList.add('show');
-    result.textContent = `Distance: ${selectedDistance}, Time: ${selectedTime} seconds, Gender: ${selectedGender}`;
+    result.textContent = `Distance: ${selectedDistance}, Time: ${minutes} minutes and ${seconds} seconds, Gender: ${selectedGender}`;
 
     const stroke = styleSelect.value;
     const distance = selectedDistance.split(' ')[0] + ' meters';
 
+    const userTimeInSeconds = (minutes * 60) + seconds; // Convert to seconds
+
+    let swimmerData;
     if (selectedGender === 'random') {
         const randomGender = Math.random() < 0.5 ? 'male' : 'female';
         result.textContent += ` (Randomly selected gender: ${randomGender})`;
@@ -164,17 +174,61 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
 
     if (swimmerData) {
         const swimmerTimeInSeconds = convertTimeToSeconds(swimmerData.time);
-        const userTimeInSeconds = convertTimeToSeconds(selectedTime);
         const timeDifference = Math.abs(userTimeInSeconds - swimmerTimeInSeconds);
 
         result.innerHTML += `<br><strong>Record Holder:</strong> ${swimmerData.name}`;
         result.innerHTML += `<br><strong>International Record:</strong> ${swimmerData.time}`;
-        result.innerHTML += `<br><strong>Your Time:</strong> ${selectedTime} seconds`;
+        result.innerHTML += `<br><strong>Your Time:</strong> ${minutes} minutes and ${seconds} seconds`;
         result.innerHTML += `<br><strong>Difference:</strong> ${timeDifference.toFixed(2)} seconds`;
     } else {
         result.textContent += '| No record found for selected gender.';
     }
 });
+
+
+function parseTime(time) {
+    const [minutePart, secondPart] = time.split(':');
+    const [seconds, milliseconds] = secondPart.split('.');
+
+    return {
+        minutes: parseInt(minutePart) || 0,
+        seconds: parseInt(seconds) || 0,
+        milliseconds: Math.round(parseFloat('0.' + (milliseconds || '0')) * 1000)
+    };
+}
+
+function formatTime(time) {
+    const minutes = time.minutes;
+    const seconds = time.seconds;
+    let milliseconds = time.milliseconds;
+
+    milliseconds = milliseconds === 0 ? '.0' : '.' + milliseconds;
+
+    return `${minutes}:${seconds < 10 ? '0' + seconds : seconds}${milliseconds}`;
+}
+
+function calculateTimeDifference(userTime, swimmerTime) {
+    const userTotalSeconds = userTime.minutes * 60 + userTime.seconds + userTime.milliseconds / 1000;
+    const swimmerTotalSeconds = swimmerTime.minutes * 60 + swimmerTime.seconds + swimmerTime.milliseconds / 1000;
+
+    const differenceInSeconds = Math.abs(userTotalSeconds - swimmerTotalSeconds);
+
+    const minutesDifference = Math.floor(differenceInSeconds / 60);
+    const secondsDifference = Math.floor(differenceInSeconds % 60);
+    const millisecondsDifference = Math.round((differenceInSeconds % 1) * 1000);
+
+    return { minutes: minutesDifference, seconds: secondsDifference, milliseconds: millisecondsDifference };
+}
+
+function formatTimeDifference(timeDifference) {
+    const minutes = timeDifference.minutes;
+    const seconds = timeDifference.seconds;
+    let milliseconds = timeDifference.milliseconds;
+
+    milliseconds = milliseconds === 0 ? '.0' : '.' + milliseconds;
+
+    return `${minutes}:${seconds < 10 ? '0' + seconds : seconds}${milliseconds}`;
+}
 
 document.querySelectorAll('.gender-icon').forEach(icon => {
     icon.addEventListener('click', function() {
@@ -188,7 +242,8 @@ document.querySelectorAll('.gender-icon').forEach(icon => {
 });
 
 document.getElementById('reset-btn').addEventListener('click', function() {
-    document.getElementById('your-time').value = '';
+    document.getElementById('your-minutes').value = '';
+    document.getElementById('your-seconds').value = '';
     
     genderRadios.forEach(radio => {
         radio.checked = false;
