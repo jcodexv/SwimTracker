@@ -87,8 +87,7 @@ body {
 
 .home div button {
     padding: 10px;
-    background-color: #0000004d;
-    backdrop-filter: blur(3.5px);
+    background-color: #00000063;
     border: 1px solid #fff;
     color: #fff;
     border-radius: 12px;
@@ -109,8 +108,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00000050;
-    backdrop-filter: blur(7px);
+    background-color: #0000008a;
+    backdrop-filter: blur(10px);
     position: fixed;
     width: 75%;
     color: #fff;
@@ -260,10 +259,6 @@ body {
         display: block;
     }
 
-    #join-btn.noblur {
-        backdrop-filter: none;
-    }
-
     #join-btn.noblur:hover {
         transform: none;
     }
@@ -338,8 +333,8 @@ body {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #0000007c;
-    backdrop-filter: blur(9px);
+    background-color: #00000094;
+    z-index: 1;
     border: 1px solid #e7f7ff48;
     color: #fff;
     border-radius: 8px;
