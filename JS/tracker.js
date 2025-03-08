@@ -160,7 +160,7 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
     const stroke = styleSelect.value;
     const distance = selectedDistance.split(' ')[0] + ' meters';
 
-    const userTimeInSeconds = (minutes * 60) + seconds; // Convert to seconds
+    const userTimeInSeconds = (minutes * 60) + seconds;
 
     let swimmerData;
     if (selectedGender === 'random') {
@@ -254,3 +254,17 @@ document.getElementById('reset-btn').addEventListener('click', function() {
     result.classList.add('hide');
     result.innerHTML = '<br><br> RESULTS WILL BE SHOWN HERE';
 });
+
+const elements = document.querySelectorAll('.tracker');
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('view');
+            observer.unobserve(entry.target); 
+        }
+    });
+});
+
+
+elements.forEach((element) => observer.observe(element));

@@ -17,8 +17,8 @@
             <div class="nav-list">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Tracker</a></li>
-                    <li><a href="#">Swimming Styles</a></li>
+                    <li><a href="#tracker">Tracker</a></li>
+                    <li><a href="#styles">Swimming Styles</a></li>
                     <li><a href="#">Timer</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -38,7 +38,7 @@
         </div>
     </div>
     
-    <div class="tracker">
+    <div class="tracker" id="tracker">
         <form id="tracker-form">
             <label for="pool-distance">Pool Length</label>
             <select name="pool-distance" id="pool-distance">
@@ -86,7 +86,7 @@
                 <span>:</span>
                 <input type="number" id="your-seconds" placeholder="Seconds" min="0" max="59">
             </div>
-            
+
             
             <button type="button" id="calculate-btn">Calculate</button>
 
@@ -96,8 +96,48 @@
                 <br><br>RESULTS WILL BE SHOWN HERE</div>
         </form>
     </div>
+
+    <div class="swimming" id="styles">
+        <div class="card">
+            <img src="./IMG/Butterfly.png" alt="Butterfly">
+            <h2>Butterfly</h2>
+        </div>
+        <div class="card">
+            <img src="./IMG/Backstroke.png" alt="Backstroke">
+            <h2>Backstroke</h2>
+        </div>
+        <div class="card">
+            <img src="./IMG/Breaststroke.png" alt="Breaststroke">
+            <h2>Breaststroke</h2>
+        </div>
+        <div class="card">
+            <img src="./IMG/Crawl.png" alt="Freestyle">
+            <h2>Freestyle</h2>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./IMG/swimlogo.png" alt="Swim Tracker Logo">
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Swim Tracker. All rights reserved</p>
+        </div>
+    </footer>
+
     <script src="./JS/tracker.js"></script>
-      
     <script src="./JS/main.js"></script>
 </body>
 </html>
