@@ -124,10 +124,43 @@ body {
     transform: translateX(-50%);
 }
 
+@media (max-width: 740px) {
+    .home div button {
+        width: 40vw;
+    }
+
+    .home div h1 {
+        font-size: 3.2rem;
+    }
+
+    .home div p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .home div button {
+        width: 60vw;
+    }
+
+    .home div h1 {
+        font-size: 2.8rem;
+    }
+
+    .home div p {
+        font-size: 1.6rem;
+    }
+}
+
 .brand {
     font-size: 1.5rem;
     margin-right: auto;
     cursor: pointer;
+    transition: 0.15s ease-out;
+}
+
+.brand.hidden {
+    opacity: 0;
 }
 
 .navbar img {
@@ -316,6 +349,10 @@ body {
     .nav-list.active {
         width: 78%;
     }
+
+    .navbar img {
+        margin-left: 20px !important;
+    }
 }
 
 
@@ -326,10 +363,27 @@ body {
     }
 }
 
-@media(max-width: 415px) {
+@media(max-width: 420px) {
     .nav-list.active {
         width: 96%;
     }
+
+    .brand {
+        font-size: 1.32rem;
+        margin-right: auto;
+        cursor: pointer;
+    }
+
+    .navbar img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .navbar img {
+        margin-left: -5px !important;
+    }
+
 }
 
 .tracker {
@@ -467,6 +521,26 @@ select {
     }
 }
 
+
+@media(max-width: 420px) {
+    .tracker {
+        width: 86%;
+        margin: 10px auto;
+    }
+
+    #reset-btn {
+        width: 30%;
+        padding: 7px;
+    }
+
+    #result {
+        font-size: 1.4rem;
+        display: block;
+        height: 190px;
+    }
+}
+
+
 #gender label img {
     width: 54px;
     height: 54px;
@@ -505,8 +579,10 @@ select {
     margin-top: 20px;
 }
 
+
 .card {
     text-align: center;
+    max-width: 100%;
     flex-grow: 1;
     flex-basis: 160px;
     height: 420px;
@@ -517,6 +593,7 @@ select {
     background-color: #0000006c;
     border: 1px solid #fff;
     border-radius: 20px;
+    backdrop-filter: blur(2px);
 }
 
 .card img {
@@ -528,6 +605,40 @@ select {
 .card h2 {
     font-size: 1.5rem;
     margin: 20px;
+}
+
+.card:hover {
+    transition: all 0.7s;
+    margin-top: -2px;
+}
+
+@media(max-width:415px) {
+    .swimming {
+        overflow-x: hidden;
+    }
+
+    .card {
+        width: 25%;
+        margin: 5px;
+    }
+
+    .card img {
+        max-width: 100%;
+    }
+}
+
+@media(max-width:378px) {
+
+    .card {
+        width: 20%;
+        height: 340px;
+        margin: 5px;
+    }
+
+    .card img {
+        max-width: 100%;
+        height: 280px;
+    }
 }
 
 footer {
