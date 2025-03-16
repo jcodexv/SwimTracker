@@ -12,3 +12,4 @@ function toggleNav(isOpen) {
 
 navToggler.addEventListener('click', () => toggleNav(true));
 navCloser.addEventListener('click', () => toggleNav(false));
+

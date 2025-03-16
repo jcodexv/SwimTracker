@@ -19,8 +19,8 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#tracker">Tracker</a></li>
                     <li><a href="#styles">Swimming Styles</a></li>
-                    <li><a href="#">Timer</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#timer">Timer</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="nav-toggler">
@@ -113,6 +113,18 @@
         <div class="card">
             <img src="./IMG/Crawl.png" alt="Freestyle">
             <h2>Freestyle</h2>
+        </div>
+    </div>
+
+    <div class="timer-container" id="timer">
+        <div id="timer-content">
+            <i class="fa-solid fa-stopwatch"></i><br>
+            <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds">00</span>
+        </div>
+        <div class="button-control">
+            <button id="startButton" class="time-btn"><i class="fa-solid fa-play"></i></button>
+            <button id="stopButton" class="time-btn" style="display:none;"><i class="fa-solid fa-stop"></i></button>
+            <button id="resetButton" class="time-btn" disabled><i class="fa-solid fa-rotate-right"></i></button>
         </div>
     </div>
 

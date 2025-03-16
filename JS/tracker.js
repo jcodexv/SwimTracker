@@ -268,3 +268,64 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 
 elements.forEach((element) => observer.observe(element));
+
+
+//TIMER
+let timerInterval;
+let milliseconds = 0;
+let seconds = 0;
+let minutes = 0;
+
+const minutesElement = document.getElementById('minutes');
+const secondsElement = document.getElementById('seconds');
+const millisecondsElement = document.getElementById('milliseconds');
+const startButton = document.getElementById('startButton');
+const stopButton = document.getElementById('stopButton');
+const resetButton = document.getElementById('resetButton');
+
+function updateTimer() {
+    milliseconds++;
+    
+    if (milliseconds === 100) {
+        milliseconds = 0;
+        seconds++;
+    }
+
+    if (seconds === 60) {
+        seconds = 0;
+        minutes++;
+    }
+
+    minutesElement.textContent = minutes < 10 ? `0${minutes}` : minutes;
+    secondsElement.textContent = seconds < 10 ? `0${seconds}` : seconds;
+    millisecondsElement.textContent = milliseconds < 10 ? `0${milliseconds}` : milliseconds;
+}
+
+function resetTimer() {
+    clearInterval(timerInterval);
+    minutes = 0;
+    seconds = 0;
+    milliseconds = 0;
+    minutesElement.textContent = '00';
+    secondsElement.textContent = '00';
+    millisecondsElement.textContent = '00';
+    startButton.disabled = false;
+    stopButton.style.display = 'none';
+    startButton.style.display = 'inline-block';
+    resetButton.disabled = true;
+}
+
+startButton.addEventListener('click', () => {
+    startButton.style.display = 'none';
+    stopButton.style.display = 'inline-block';
+    resetButton.disabled = false;
+    timerInterval = setInterval(updateTimer, 10);
+});
+
+stopButton.addEventListener('click', () => {
+    startButton.style.display = 'inline-block';
+    stopButton.style.display = 'none';
+    clearInterval(timerInterval);
+});
+
+resetButton.addEventListener('click', resetTimer);

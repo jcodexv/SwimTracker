@@ -641,6 +641,69 @@ select {
     }
 }
 
+.timer-container {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 30px;
+    background-color: #0000008a;
+    backdrop-filter: blur(2px);
+    height: 100vh;
+    border: 1px solid #fff;
+}
+
+#timer-content i {
+    font-size: 16.7rem;
+    margin-bottom: 15px;
+}
+
+#timer-content {
+    font-size: 2.65rem;
+}
+
+.button-control {
+    display: flex;
+}
+
+.time-btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    width: 110px;
+    border: 1px solid #fff;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.time-btn i {
+    margin: auto;
+}
+
+#resetButton {
+    border-color: #ff1414;
+    color: #ff1414;
+    font-size: 1rem;
+    width: 80px;
+}
+
+.time-btn:disabled {
+    cursor: not-allowed;
+    filter: brightness(0.5);
+}
+
+i {
+    margin-right: 8px;
+}
+
 footer {
     background-color: #000000f3;
     color: #fff;
