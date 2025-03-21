@@ -2,6 +2,7 @@ const navToggler = document.querySelector('#open-btn');
 const navCloser = document.querySelector('#close-btn');
 const navList = document.querySelector('.nav-list');
 const brand = document.querySelector('.brand');
+const navLinks = document.querySelectorAll('.nav-list a');
 
 function toggleNav(isOpen) {
     navList.classList.toggle("active", isOpen);
@@ -10,6 +11,9 @@ function toggleNav(isOpen) {
     brand.classList.toggle("hidden", isOpen);
 }
 
+navLinks.forEach(link => {
+    link.addEventListener('click', () => toggleNav(false));
+});
+
 navToggler.addEventListener('click', () => toggleNav(true));
 navCloser.addEventListener('click', () => toggleNav(false));
-
