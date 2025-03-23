@@ -17,3 +17,8 @@ navLinks.forEach(link => {
 
 navToggler.addEventListener('click', () => toggleNav(true));
 navCloser.addEventListener('click', () => toggleNav(false));
+
+
+document.getElementById("join-btn").addEventListener("click", function() {
+    document.getElementById("comparison").scrollIntoView({ behavior: "smooth" });
+  });
