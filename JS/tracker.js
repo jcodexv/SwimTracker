@@ -141,7 +141,6 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
     const minutes = parseInt(document.getElementById('your-minutes').value) || 0;
     const seconds = parseInt(document.getElementById('your-seconds').value) || 0;
 
-    // Validate inputs
     if (isNaN(minutes) || isNaN(seconds)) {
         alert("Please enter valid numbers for minutes and seconds.");
         return;
@@ -175,16 +174,28 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
     if (swimmerData) {
         const swimmerTimeInSeconds = convertTimeToSeconds(swimmerData.time);
         const timeDifference = Math.abs(userTimeInSeconds - swimmerTimeInSeconds);
-
+    
         result.innerHTML += `<br><strong>Record Holder:</strong> ${swimmerData.name}`;
         result.innerHTML += `<br><strong>International Record:</strong> ${swimmerData.time}`;
-        result.innerHTML += `<br><strong>Your Time:</strong> ${minutes} minutes and ${seconds} seconds`;
-        result.innerHTML += `<br><strong>Difference:</strong> ${timeDifference.toFixed(2)} seconds`;
+        result.innerHTML += `<br><h6 class="your-record"><strong>Your Time:</strong> ${minutes} minutes and ${seconds} seconds </h6>`;
+        result.innerHTML += `<br><h5 class="dif-text"><strong>Difference:</strong> <b class="time-color">${timeDifference.toFixed(2)} seconds</b></h5>`;
+
+        const userColorTime = minutes * 60 + seconds;
+        const swimmerColorTime = Math.floor(swimmerTimeInSeconds);
+        const color = document.querySelector('.time-color');
+
+        if (userColorTime <= swimmerColorTime || userColorTime <= swimmerColorTime * 1.15) {
+            color.style.color = "#0fb626f1"; 
+        } else if (userColorTime > swimmerColorTime * 1.75) {
+            color.style.color = "#e40000e0"; 
+        } else {
+            color.style.color = "#e0e422f5";
+        }
     } else {
         result.textContent += '| No record found for selected gender.';
     }
+    
 });
-
 
 function parseTime(time) {
     const [minutePart, secondPart] = time.split(':');
@@ -219,6 +230,7 @@ function calculateTimeDifference(userTime, swimmerTime) {
 
     return { minutes: minutesDifference, seconds: secondsDifference, milliseconds: millisecondsDifference };
 }
+
 
 function formatTimeDifference(timeDifference) {
     const minutes = timeDifference.minutes;

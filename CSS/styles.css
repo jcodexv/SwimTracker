@@ -499,6 +499,35 @@ label {
     font-size: 1.1rem;
 }
 
+h6 {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -10px;
+}
+
+.dif-text {
+    font-size: 2rem;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #000000f1;
+}
+
+.dif-text::before {
+    content: "----";
+}
+
+.dif-text::after {
+    content: "----";
+}
+
+.time-color {
+    text-shadow: 0.5px 0.5px 1px #000;
+    font-weight: 500;
+}
+
 select {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -506,6 +535,25 @@ select {
     font-size: 1rem;
     border-radius: 4px;
     cursor: pointer;
+}
+
+@media(max-width: 670px) {
+    .dif-text::before {
+        content: "--";
+    }
+
+    .dif-text::after {
+        content: "--";
+    }
+
+    h6 {
+        font-size: 1.15rem;
+        margin-bottom: -5px;
+    }
+
+    .dif-text {
+        font-size: 1.6rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -523,7 +571,45 @@ select {
     #calculate-btn {
         font-size: 1rem;
     }
+
+    h6 {
+        font-size: 1.15rem;
+        margin-bottom: -15px;
+    }
+
+    .dif-text {
+        font-size: 1.5rem;
+    }
 }
+
+@media(max-width:500px) {
+    h6 {
+        margin-bottom: -16px;
+    }
+
+    .dif-text {
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width:445px) {
+    h6 {
+        margin-bottom: -17px;
+    }
+
+    .dif-text {
+        font-size: 1.35rem;
+    }
+
+    .dif-text::before {
+        content: "-";
+    }
+
+    .dif-text::after {
+        content: "-";
+    }
+}
+
 
 
 @media(max-width: 420px) {
@@ -537,10 +623,44 @@ select {
         padding: 7px;
     }
 
+    h6 {
+        margin-bottom: 5px;
+    }
+
+    .dif-text {
+        font-size: 1.3rem;
+    }
+
     #result {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         display: block;
-        height: 190px;
+        height: 200px;
+    }
+
+    .dif-text::before {
+        content: "";
+    }
+
+    .dif-text::after {
+        content: "";
+    }
+}
+
+@media(max-width: 397px) {
+
+    h6 {
+        margin-bottom: -7px;
+    }
+
+    #result {
+        height: 270px;
+    }
+}
+
+@media(max-width: 300px) {
+
+    #result {
+        height: 300px;
     }
 }
 
@@ -568,7 +688,7 @@ select {
 }
 
 .time-inputs input {
-    width: 72px;
+    width: 53px;
     margin-right: 5px;
 }
 
