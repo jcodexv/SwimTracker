@@ -13,4 +13,4 @@ A website designed to track your swimming times and compare them with internatio
 - Frameworks: Fontawesome
 
 ## LINK
-https://johncoffeexl.github.io/SwimTracker/
+[(https://jcodexv.github.io/SwimTracker/)]
