@@ -33,14 +33,24 @@
             </div>
         </div>
     </header>
-    <div class="home">
-        <video src="./IMG/Background.mp4" autoplay muted loop></video>
-        <div>
-            <h1>Swim Tracker</h1>
-            <p>The best web-app to improve your swimming performance</p>
-            <button id="try-btn"><a href="#comparison">Try Now!</a></button>
-        </div>
-    </div>
+   <div class="home">
+  <video 
+    src="./IMG/Background.mp4" 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    poster="./IMG/fallback.webp">
+    <img src="./IMG/fallback.webp" alt="Background fallback">
+  </video>
+
+  <div>
+    <h1>Swim Tracker</h1>
+    <p>The best web-app to improve your swimming performance</p>
+    <button id="try-btn"><a href="#comparison">Try Now!</a></button>
+  </div>
+</div>
+
     
     <div class="tracker" id="comparison">
         <form id="tracker-form">
